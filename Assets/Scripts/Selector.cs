@@ -46,68 +46,68 @@ public class Selector : MonoBehaviour {
             if (hit.transform.GetComponent<Interactive>())
             { 
                 // start selecting
-                SelectInteractive();
+
             }
             else
             {
                 // deselect interactive
-                DeselectInteractive();
+
             }
         }
         else
         {
             // deselect interactive
-            DeselectInteractive();
+
         }
 	}
 
     void SelectInteractive()
     {
         // turn on the selector ui
-        selector.SetActive(true);
+
 
         // start the selection timer
-        selectionTimer += Time.deltaTime;
+
 
         // fill the selector ui by amount of time passed
-        selectorFill.fillAmount = selectionTimer / selectionTime;
+
 
         // check if enough time has passed for selection
-        if (selectionTimer >= selectionTime)
+        //if ()
         {
             // turn on the hint ui
-            hint.SetActive(true);
+
 
             // save the object as selected
-            selectedInteractive = hit.transform.GetComponent<Interactive>();
+
 
             // set the interactive to selected
-            selectedInteractive.isSelected = true;
+
 
             // turn off the selector ui
-            selector.SetActive(false);
+
         }
     }
 
     void DeselectInteractive()
     {
         // turn off the hint ui
-        hint.SetActive(false);
+
 
         // turn off selector ui
-        selector.SetActive(false);
+
 
         // reset the selection timer
-        selectionTimer = 0;
+
 
         // reset the selector ui fill
-        selectorFill.fillAmount = 0.0f;
+
 
         // check if any hint are previously selected
-        if (selectedInteractive)
+        //if ()
         {
             // deselect the hint
-            selectedInteractive.isSelected = false;
+
         }
     }
 }

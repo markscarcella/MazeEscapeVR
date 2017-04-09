@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class Interactive : MonoBehaviour {
 
     // Define a bool to check if selected
-    public bool isSelected;
+
 
     // Define a colour to hold the tint 
-    public Color selectedTint;
+
 
     // Define a colour to hold the original colour
     Color originalTint;
@@ -25,15 +25,15 @@ public class Interactive : MonoBehaviour {
     void Update () {
 
         // Check if the object is selected
-        if (isSelected)
+        //if ()
         {
             // Change the colour to the selected tint
-            GetComponent<Renderer>().material.color = selectedTint;
+
         }
-        else
+        //else
         {
             // Change the colour to the original tint
-            GetComponent<Renderer>().material.color = originalTint;
+
         }
     }
 }

@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class Hint : MonoBehaviour {
 
     // Define the hint text object
-    public Text hint;
+
 
     // Define the hint message
-    public string message;
+
 
     // Define the interactive component
     Interactive interactive;
@@ -21,9 +21,6 @@ public class Hint : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (interactive.isSelected)
-        {
-            hint.text = message;
-        }
+        // if the interactive is selected, then set the hint message
     }
 }
